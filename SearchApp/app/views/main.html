@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="top">
+    <h1 id="title">SearchApp</h1>
+    <h4 id="subtitle">Find new places in your area</h4>
+    <hr>
+  </div>
+  <div id="searchApp">
+    <div id="placeId">
+      <p class="fa fa-map-o"></p>
+      <input ng-model="placeInfo" id="placeInfo" type="number" placeholder="Search radius (miles)"></input>
+      <select id="selectCategories" ng-model="select">
+        <option value="Search-Categories">Search Categories</option>
+      </select>
+          <p><a ui-sref=".results"  ng-click="main.getInfo()">Submit</a></p>
+          <p>Find {{select}} that are {{placeInfo}} miles away from me.</p>
+            <div ui-view></ui-view>
+        </div>
+    </div>
+  </div>
